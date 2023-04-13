@@ -61,7 +61,7 @@
           <label for="message"><b><br>Message</b></label>
           <textarea placeholder="Enter Message" name="message" required></textarea> 
 
-          <button type="submit"><br>Send</button>
+          <button type="submit" id="submit"><br>Send</button>
         </form>
       </section>
     </main>
@@ -89,7 +89,7 @@
   };
   
  firebase.initializeApp(firebaseConfig);
- document.getElementById("submit").addEventListener("click", submitForm);
+ document.getElementById("submit").addEventListener("submit", submitForm);
 
 function submitForm(e) {
   e.preventDefault();
@@ -111,7 +111,7 @@ function submitForm(e) {
   }, 3000);
 
   //   reset the form
-  document.getElementById("donate-form").reset();
+  document.getElementById("submit").reset();
 }
   </script>
 
